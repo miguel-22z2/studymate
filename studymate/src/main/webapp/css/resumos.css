@@ -1,0 +1,223 @@
+/* ============================================================
+   StudyMate — resumos.css
+   Estilos das telas de geração e visualização de resumos
+   ============================================================ */
+
+/* ============================================================
+   CARD DE GERAÇÃO
+   ============================================================ */
+
+.resumo-gerar-card {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.resumo-gerar-header h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.resumo-gerar-header p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.resumo-gerar-card .campo label {
+    color: #d1d5db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contador-chars {
+    font-size: 12px;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+.resumo-gerar-card textarea {
+    background: #0f172a;
+    border-color: #374151;
+    color: #f9fafb;
+    min-height: 200px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.resumo-gerar-card textarea:focus {
+    border-color: #4f46e5;
+    background: #0f172a;
+}
+
+.resumo-gerar-card textarea::placeholder {
+    color: #4b5563;
+}
+
+.btn-resumir {
+    font-size: 15px;
+    padding: 12px 28px;
+}
+
+/* ============================================================
+   LISTA DE RESUMOS
+   ============================================================ */
+
+.secao-resumos h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+.lista-resumos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.resumo-card-item {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 22px;
+    transition: box-shadow 0.2s;
+}
+
+.resumo-card-item:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.resumo-card-preview p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    white-space: pre-line;
+}
+
+.resumo-card-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 12px;
+}
+
+.resumo-data {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.resumo-acoes {
+    display: flex;
+    gap: 8px;
+}
+
+/* ============================================================
+   VER RESUMO COMPLETO
+   ============================================================ */
+
+/* Conteúdo original (colapsável) */
+.conteudo-original-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.toggle-original {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.toggle-original:hover {
+    background: #f3f4f6;
+}
+
+.conteudo-original-texto {
+    padding: 16px 20px 20px;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.7;
+    border-top: 1px solid #e5e7eb;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+/* Card do resumo da IA */
+.resumo-completo-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.resumo-completo-header {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    padding: 16px 24px;
+}
+
+.resumo-badge {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Conteúdo do resumo gerado */
+.resumo-conteudo-ia {
+    padding: 28px 32px;
+    font-size: 15px;
+    color: #1f2937;
+    line-height: 1.85;
+}
+
+.resumo-conteudo-ia h2 {
+    font-size: 20px;
+    color: #111827;
+    margin: 24px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.resumo-conteudo-ia h3 {
+    font-size: 17px;
+    color: #1f2937;
+    margin: 20px 0 8px;
+}
+
+.resumo-conteudo-ia strong {
+    color: #111827;
+}
+
+.resumo-conteudo-ia li {
+    margin: 6px 0 6px 20px;
+    list-style: disc;
+    color: #374151;
+}
+
+.resumo-conteudo-ia br + br {
+    display: block;
+    content: '';
+    margin-top: 8px;
+}

@@ -1,0 +1,454 @@
+/* ============================================================
+   StudyMate — app.css
+   Estilos gerais da área logada (dashboard, matérias, etc.)
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   VARIÁVEIS DE TEMA (light = padrão)
+   ============================================================ */
+
+:root {
+    --cor-fundo: #f3f4f6;
+    --cor-texto: #111827;
+    --cor-texto-secundario: #6b7280;
+    --cor-texto-terciario: #9ca3af;
+
+    --cor-card-fundo: #ffffff;
+    --cor-card-borda: #e5e7eb;
+    --cor-card-sombra: rgba(0,0,0,0.08);
+    --cor-card-sombra-hover: rgba(0,0,0,0.12);
+
+    --cor-input-borda: #e5e7eb;
+    --cor-input-texto: #111827;
+
+    --cor-primaria: #4f46e5;
+    --cor-primaria-hover: #4338ca;
+
+    --cor-btn-sec-fundo: #ffffff;
+    --cor-btn-sec-texto: #374151;
+    --cor-btn-sec-borda: #d1d5db;
+    --cor-btn-sec-hover: #f9fafb;
+
+    --cor-icone-hover: #f3f4f6;
+
+    --cor-navbar-fundo: #1a1a2e;
+    --cor-navbar-link: #9ca3af;
+    --cor-navbar-link-hover-fundo: #2d2d4e;
+    --cor-navbar-nome: #d1d5db;
+}
+
+/* ============================================================
+   VARIÁVEIS DE TEMA (dark)
+   ============================================================ */
+
+[data-theme="dark"] {
+    --cor-fundo: #0f0f1a;
+    --cor-texto: #e5e7eb;
+    --cor-texto-secundario: #9ca3af;
+    --cor-texto-terciario: #6b7280;
+
+    --cor-card-fundo: #1a1a2e;
+    --cor-card-borda: #2d2d44;
+    --cor-card-sombra: rgba(0,0,0,0.4);
+    --cor-card-sombra-hover: rgba(0,0,0,0.6);
+
+    --cor-input-borda: #2d2d44;
+    --cor-input-texto: #e5e7eb;
+
+    --cor-primaria: #6366f1;
+    --cor-primaria-hover: #818cf8;
+
+    --cor-btn-sec-fundo: #1a1a2e;
+    --cor-btn-sec-texto: #d1d5db;
+    --cor-btn-sec-borda: #2d2d44;
+    --cor-btn-sec-hover: #22223a;
+
+    --cor-icone-hover: #22223a;
+
+    --cor-navbar-fundo: #0a0a14;
+    --cor-navbar-link: #9ca3af;
+    --cor-navbar-link-hover-fundo: #1a1a2e;
+    --cor-navbar-nome: #d1d5db;
+}
+
+/* Transição suave ao trocar de tema */
+body, .navbar, .card-materia, .form-card, .campo input,
+.campo textarea, .campo select, .btn-primario, .btn-secundario {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
+.navbar {
+    background: var(--cor-navbar-fundo);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-marca a {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+}
+
+.navbar-links a {
+    color: var(--cor-navbar-link);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navbar-links a:hover {
+    background: var(--cor-navbar-link-hover-fundo);
+    color: #ffffff;
+}
+
+.navbar-links a.ativo {
+    background: var(--cor-primaria);
+    color: #ffffff;
+}
+
+.navbar-usuario {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.navbar-nome {
+    color: var(--cor-navbar-nome);
+    font-size: 14px;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid #6b7280;
+    color: #9ca3af;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-logout:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+/* ============================================================
+   TOGGLE DE TEMA
+   ============================================================ */
+
+.btn-toggle-tema {
+    background: transparent;
+    border: 1px solid #6b7280;
+    color: #d1d5db;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btn-toggle-tema:hover {
+    background: #2d2d4e;
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+/* ============================================================
+   CABEÇALHO DE PÁGINA
+   ============================================================ */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.page-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+.subtitulo {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+
+.btn-primario {
+    background: var(--cor-primaria);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primario:hover { background: var(--cor-primaria-hover); }
+.btn-primario:active { transform: scale(0.98); }
+
+.btn-secundario {
+    background: var(--cor-btn-sec-fundo);
+    color: var(--cor-btn-sec-texto);
+    border: 1px solid var(--cor-btn-sec-borda);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.btn-secundario:hover { background: var(--cor-btn-sec-hover); }
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.btn-icone {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-icone:hover { background: var(--cor-icone-hover); }
+.btn-perigo:hover { background: #fee2e2; }
+
+/* ============================================================
+   ALERTAS
+   ============================================================ */
+
+.alert {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.alert-erro    { background: #fee2e2; color: #991b1b; border-left: 4px solid #ef4444; }
+.alert-sucesso { background: #dcfce7; color: #166534; border-left: 4px solid #22c55e; }
+.alert-info    { background: #dbeafe; color: #1e40af; border-left: 4px solid #3b82f6; }
+
+[data-theme="dark"] .alert-erro    { background: #3f1d1d; color: #fca5a5; }
+[data-theme="dark"] .alert-sucesso { background: #14301f; color: #86efac; }
+[data-theme="dark"] .alert-info    { background: #16243f; color: #93c5fd; }
+
+/* ============================================================
+   GRID DE CARDS DE MATÉRIAS
+   ============================================================ */
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-materia {
+    background: var(--cor-card-fundo);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 4px var(--cor-card-sombra);
+    border: 1px solid var(--cor-card-borda);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: box-shadow 0.2s;
+}
+
+.card-materia:hover {
+    box-shadow: 0 4px 16px var(--cor-card-sombra-hover);
+}
+
+.card-materia-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.card-materia-topo h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cor-texto);
+    flex: 1;
+}
+
+.card-acoes {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.card-acoes form { margin: 0; }
+
+.card-materia-desc {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.5;
+    flex: 1;
+}
+
+.card-materia-rodape {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.empty-state {
+    text-align: center;
+    padding: 64px 24px;
+    color: var(--cor-texto-secundario);
+}
+
+.empty-icon {
+    font-size: 56px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.empty-state h3 {
+    font-size: 20px;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+/* ============================================================
+   FORMULÁRIO (card)
+   ============================================================ */
+
+.form-card {
+    background: var(--cor-card-fundo);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 1px 4px var(--cor-card-sombra);
+    border: 1px solid var(--cor-card-borda);
+    max-width: 640px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: 6px;
+}
+
+.opcional {
+    font-weight: 400;
+    color: var(--cor-texto-terciario);
+    font-size: 13px;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--cor-input-borda);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--cor-input-texto);
+    background: var(--cor-card-fundo);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    border-color: var(--cor-primaria);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: var(--cor-texto-terciario);
+}
+
+.form-acoes {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 8px;
+}

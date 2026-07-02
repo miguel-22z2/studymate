@@ -1,0 +1,151 @@
+/* ============================================================
+   StudyMate — auth.css
+   Estilos para as telas de Login e Cadastro
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container centralizado */
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+/* Card principal */
+.auth-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 36px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo e título */
+.auth-logo {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.auth-logo h1 {
+    font-size: 28px;
+    color: #1a1a2e;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.auth-logo p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Campos do formulário */
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #111827;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #4f46e5;
+}
+
+.campo input::placeholder {
+    color: #9ca3af;
+}
+
+/* Botão principal */
+.btn-primario {
+    width: 100%;
+    padding: 13px;
+    background: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primario:hover {
+    background: #4338ca;
+}
+
+.btn-primario:active {
+    transform: scale(0.98);
+}
+
+/* Alertas */
+.alert {
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.alert-erro {
+    background: #fee2e2;
+    color: #991b1b;
+    border-left: 4px solid #ef4444;
+}
+
+.alert-sucesso {
+    background: #dcfce7;
+    color: #166534;
+    border-left: 4px solid #22c55e;
+}
+
+.alert-info {
+    background: #dbeafe;
+    color: #1e40af;
+    border-left: 4px solid #3b82f6;
+}
+
+/* Rodapé do card */
+.auth-rodape {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.auth-rodape a {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-rodape a:hover {
+    text-decoration: underline;
+}

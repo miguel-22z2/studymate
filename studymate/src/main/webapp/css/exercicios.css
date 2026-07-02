@@ -1,0 +1,371 @@
+/* ============================================================
+   StudyMate — exercicios.css
+   Estilos das telas de geração, quiz, feedback e resultado
+   ============================================================ */
+
+/* ============================================================
+   CARD DE GERAÇÃO
+   ============================================================ */
+
+.gerar-card {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.gerar-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.gerar-card p {
+    color: #9ca3af;
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+.gerar-controles {
+    margin-bottom: 24px;
+}
+
+.gerar-controles label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #d1d5db;
+    margin-bottom: 12px;
+}
+
+.quantidade-selector {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.qtd-btn {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #374151;
+    background: #1f2937;
+    color: #9ca3af;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.qtd-btn:hover {
+    border-color: #6366f1;
+    color: #ffffff;
+}
+
+.qtd-btn.ativo {
+    background: #4f46e5;
+    border-color: #4f46e5;
+    color: #ffffff;
+}
+
+.qtd-selecionada {
+    font-size: 13px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.btn-gerar {
+    font-size: 16px;
+    padding: 14px 32px;
+}
+
+/* ============================================================
+   LISTA DE EXERCÍCIOS
+   ============================================================ */
+
+.secao-exercicios h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+.lista-exercicios {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.exercicio-item {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+
+.exercicio-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.exercicio-numero {
+    background: #4f46e5;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    min-width: 42px;
+    text-align: center;
+}
+
+.exercicio-conteudo {
+    flex: 1;
+}
+
+.exercicio-enunciado {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.exercicio-acoes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.gabarito-box {
+    margin-top: 12px;
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 12px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    color: #166534;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   QUIZ
+   ============================================================ */
+
+.quiz-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    max-width: 760px;
+}
+
+.quiz-badge {
+    display: inline-block;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.quiz-enunciado p {
+    font-size: 18px;
+    color: #111827;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.quiz-card .campo {
+    margin-top: 24px;
+}
+
+/* ============================================================
+   FEEDBACK
+   ============================================================ */
+
+.feedback-resultado {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 24px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.feedback-acerto {
+    background: #dcfce7;
+    color: #166534;
+    border: 2px solid #22c55e;
+}
+
+.feedback-erro {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 2px solid #ef4444;
+}
+
+.feedback-icone {
+    font-size: 28px;
+}
+
+.feedback-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+}
+
+.feedback-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.feedback-card p {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.feedback-ia-card {
+    border-left: 4px solid #4f46e5;
+    background: #f5f3ff;
+}
+
+.feedback-texto {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.8;
+}
+
+.feedback-acoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   RESULTADO FINAL
+   ============================================================ */
+
+.resultado-placar {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 40px 32px;
+    text-align: center;
+    margin: 24px 0 32px;
+}
+
+.resultado-emoji {
+    font-size: 64px;
+    margin-bottom: 12px;
+}
+
+.resultado-placar h3 {
+    font-size: 22px;
+    margin-bottom: 28px;
+    color: #e5e7eb;
+}
+
+.resultado-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-numero {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.barra-progresso-container {
+    background: #374151;
+    border-radius: 999px;
+    height: 10px;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.barra-progresso {
+    background: linear-gradient(90deg, #4f46e5, #818cf8);
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.8s ease;
+}
+
+/* ============================================================
+   HISTÓRICO DE SESSÃO
+   ============================================================ */
+
+.historico-sessao {
+    margin-top: 16px;
+}
+
+.historico-sessao h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+.historico-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    border-left: 4px solid #e5e7eb;
+}
+
+.historico-acerto { border-left-color: #22c55e; }
+.historico-erro   { border-left-color: #ef4444; }
+
+.historico-header {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+.historico-enunciado {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.historico-item p {
+    font-size: 14px;
+    color: #374151;
+}

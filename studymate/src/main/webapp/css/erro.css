@@ -1,0 +1,58 @@
+/* ============================================================
+   StudyMate — erro.css
+   Estilos das páginas de erro 404 e 500
+   ============================================================ */
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.erro-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.erro-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.erro-codigo {
+    font-size: 88px;
+    font-weight: 900;
+    color: #4f46e5;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.erro-500 {
+    color: #ef4444;
+}
+
+.erro-card h2 {
+    font-size: 22px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.erro-card p {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.erro-acoes {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}

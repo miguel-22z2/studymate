@@ -1,0 +1,215 @@
+/* ============================================================
+   StudyMate — dashboard.css
+   Estilos do painel principal do aluno
+   ============================================================ */
+
+/* Hero de boas-vindas */
+.dashboard-hero {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 16px;
+    padding: 32px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dashboard-hero-texto h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.dashboard-hero-texto p {
+    color: #9ca3af;
+    font-size: 15px;
+}
+
+.btn-hero {
+    font-size: 15px;
+    padding: 12px 24px;
+    white-space: nowrap;
+}
+
+/* ============================================================
+   GRID DE ESTATÍSTICAS
+   ============================================================ */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.stat-card {
+    border-radius: 14px;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.stat-card-icone {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.stat-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-card-numero {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-card-label {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.85;
+    line-height: 1.3;
+}
+
+/* Cores dos cards */
+.stat-azul   { background: #eff6ff; color: #1d4ed8; }
+.stat-roxo   { background: #f5f3ff; color: #6d28d9; }
+.stat-verde  { background: #f0fdf4; color: #15803d; }
+.stat-amarelo{ background: #fefce8; color: #a16207; }
+.stat-cinza  { background: #f9fafb; color: #374151; }
+
+/* ============================================================
+   ACESSO RÁPIDO
+   ============================================================ */
+
+.acesso-rapido {
+    margin-bottom: 36px;
+}
+
+.acesso-rapido h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+.acesso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+}
+
+.acesso-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: #111827;
+    transition: all 0.2s;
+}
+
+.acesso-card:hover {
+    border-color: #4f46e5;
+    box-shadow: 0 4px 14px rgba(79,70,229,0.12);
+    transform: translateY(-2px);
+}
+
+.acesso-icone {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.acesso-card strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.acesso-card p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* ============================================================
+   PRIMEIROS PASSOS (estado vazio)
+   ============================================================ */
+
+.primeiros-passos {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+}
+
+.primeiros-passos h3 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 28px;
+}
+
+.passos-lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.passo {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    max-width: 210px;
+    text-align: left;
+}
+
+.passo-numero {
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.passo-texto strong {
+    display: block;
+    font-size: 14px;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.passo-texto p {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.passo-seta {
+    font-size: 22px;
+    color: #d1d5db;
+    flex-shrink: 0;
+}

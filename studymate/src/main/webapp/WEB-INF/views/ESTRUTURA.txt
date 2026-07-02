@@ -1,0 +1,24 @@
+Estrutura de views JSP do StudyMate
+======================================
+
+/WEB-INF/views/
+├── auth/
+│   ├── login.jsp          ← Tela de login
+│   └── cadastro.jsp       ← Tela de cadastro
+├── app/
+│   ├── dashboard.jsp      ← Painel principal do aluno
+│   ├── materias/
+│   │   ├── lista.jsp      ← Lista de matérias
+│   │   ├── nova.jsp       ← Formulário nova matéria
+│   │   └── editar.jsp     ← Formulário editar matéria
+│   ├── exercicios/
+│   │   ├── gerar.jsp      ← Gerar exercícios via IA
+│   │   └── quiz.jsp       ← Modo quiz (pergunta + resposta)
+│   └── resumos/
+│       ├── novo.jsp       ← Colar conteúdo para resumir
+│       └── ver.jsp        ← Exibir resumo gerado
+└── erro/
+    ├── 404.jsp
+    └── 500.jsp
+
+As JSPs serão criadas nas próximas etapas do projeto.
