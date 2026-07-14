@@ -25,29 +25,19 @@
                📚 Matérias
             </a>
         </li>
-        <li>
-            <a href="<%= _ctx %>/app/exercicios"
-               class="<%= _uri.contains("/exercicios") ? "ativo" : "" %>">
-               🤖 Exercícios
-            </a>
-        </li>
-        <li>
-            <a href="<%= _ctx %>/app/resumos"
-               class="<%= _uri.contains("/resumos") ? "ativo" : "" %>">
-               📝 Resumos
-            </a>
-        </li>
     </ul>
 
     <div class="navbar-usuario">
         <button id="btnToggleTema" class="btn-toggle-tema" title="Alternar tema" onclick="alternarTema()">🌙</button>
         <span class="navbar-nome">👤 <%= _nomeUsuario %></span>
         <a href="<%= _ctx %>/logout" class="btn-logout">Sair</a>
+        <form action="deletarConta" method="post">
+        	<input type="submit" value="Deletar conta" id="btnDeletarConta" class="btn-logout">
+        </form>
     </div>
 </nav>
 
 <script>
-    // Aplica o tema salvo assim que a navbar carrega (evita "flash" de tema errado)
     (function() {
         var temaSalvo = localStorage.getItem('studymate-tema') || 'light';
         document.documentElement.setAttribute('data-theme', temaSalvo);
@@ -69,4 +59,5 @@
             btn.textContent = tema === 'dark' ? '☀️' : '🌙';
         }
     }
+    
 </script>

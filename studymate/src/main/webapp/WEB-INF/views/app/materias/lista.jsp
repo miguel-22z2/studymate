@@ -20,7 +20,7 @@
 
     <div class="page-header">
         <div>
-            <h2>📚 Minhas Matérias</h2>
+            <h2>Matérias registradas</h2>
             <p class="subtitulo">Organize os conteúdos que você está estudando</p>
         </div>
         <a href="${pageContext.request.contextPath}/app/materias?acao=nova" class="btn-primario">
@@ -83,9 +83,9 @@
 
                         <div class="card-materia-rodape">
                             <a href="${pageContext.request.contextPath}/app/exercicios?materiaId=${m.id}"
-                               class="btn-secundario btn-sm">🤖 Exercícios</a>
+                               class="btn-secundario btn-sm">Exercícios</a>
                             <a href="${pageContext.request.contextPath}/app/resumos?materiaId=${m.id}"
-                               class="btn-secundario btn-sm">📝 Resumo</a>
+                               class="btn-secundario btn-sm">Resumo</a>
                         </div>
                     </div>
                 </c:forEach>

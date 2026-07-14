@@ -32,7 +32,7 @@
     <div class="dashboard-hero">
         <div class="dashboard-hero-texto">
             <h2><%= saudacao %>, <%= primeiroNome %>! 👋</h2>
-            <p>Acompanhe seu progresso e continue estudando com IA.</p>
+            <p>Acompanhe seu progresso e continue estudando!</p>
         </div>
         <a href="${pageContext.request.contextPath}/app/materias?acao=nova"
            class="btn-primario btn-hero">+ Nova Matéria</a>
@@ -46,7 +46,7 @@
     <div class="stats-grid">
 
         <div class="stat-card stat-azul">
-            <div class="stat-card-icone">📚</div>
+            <div class="stat-card-icone"></div>
             <div class="stat-card-info">
                 <span class="stat-card-numero"><%= totalMaterias %></span>
                 <span class="stat-card-label">Matérias cadastradas</span>
@@ -54,7 +54,7 @@
         </div>
 
         <div class="stat-card stat-roxo">
-            <div class="stat-card-icone">🤖</div>
+            <div class="stat-card-icone"></div>
             <div class="stat-card-info">
                 <span class="stat-card-numero"><%= totalExercicios %></span>
                 <span class="stat-card-label">Exercícios gerados</span>
@@ -62,7 +62,7 @@
         </div>
 
         <div class="stat-card stat-verde">
-            <div class="stat-card-icone">✅</div>
+            <div class="stat-card-icone"></div>
             <div class="stat-card-info">
                 <span class="stat-card-numero"><%= totalAcertos %></span>
                 <span class="stat-card-label">Questões acertadas</span>
@@ -70,7 +70,7 @@
         </div>
 
         <div class="stat-card stat-amarelo">
-            <div class="stat-card-icone">📝</div>
+            <div class="stat-card-icone"></div>
             <div class="stat-card-info">
                 <span class="stat-card-numero"><%= totalResumos %></span>
                 <span class="stat-card-label">Resumos gerados</span>
@@ -78,7 +78,7 @@
         </div>
 
         <div class="stat-card stat-cinza">
-            <div class="stat-card-icone">🎯</div>
+            <div class="stat-card-icone"></div>
             <div class="stat-card-info">
                 <span class="stat-card-numero"><%= totalSessoes %></span>
                 <span class="stat-card-label">Sessões de estudo</span>
@@ -92,7 +92,7 @@
         <div class="acesso-grid">
 
             <a href="${pageContext.request.contextPath}/app/materias" class="acesso-card">
-                <span class="acesso-icone">📚</span>
+                <span class="acesso-icone"></span>
                 <div>
                     <strong>Minhas Matérias</strong>
                     <p>Gerencie e organize suas matérias</p>
@@ -100,7 +100,7 @@
             </a>
 
             <a href="${pageContext.request.contextPath}/app/materias" class="acesso-card">
-                <span class="acesso-icone">🤖</span>
+                <span class="acesso-icone"></span>
                 <div>
                     <strong>Gerar Exercícios</strong>
                     <p>Pratique com questões criadas por IA</p>
@@ -108,7 +108,7 @@
             </a>
 
             <a href="${pageContext.request.contextPath}/app/materias" class="acesso-card">
-                <span class="acesso-icone">📝</span>
+                <span class="acesso-icone"></span>
                 <div>
                     <strong>Criar Resumo</strong>
                     <p>Resuma conteúdos com IA em segundos</p>

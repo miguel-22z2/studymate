@@ -161,6 +161,7 @@ body {
     font-size: 13px;
     text-decoration: none;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .btn-logout:hover {
