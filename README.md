@@ -28,8 +28,6 @@ O StudyMate permite que estudantes organizem suas matérias, gerem exercícios d
 | Build          | Maven                                |
 | IA             | Google Gemini API (`gemini-2.5-flash-lite`) |
 | Segurança      | BCrypt (hash de senhas)              |
-| IDE            | Eclipse                              |
-
 ---
 
 ## Arquitetura
